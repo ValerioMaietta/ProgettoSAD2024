@@ -16,7 +16,7 @@ RUN npm install
 COPY . .
 
 # Expose
-EXPOSE 6000
+EXPOSE 8000
 
 # Run app
 CMD ["npm", "start"]
