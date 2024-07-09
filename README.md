@@ -11,6 +11,7 @@ Caratteristiche principali:
 - Gestione dello stato globale con Zustand: Manteniamo l'applicazione altamente reattiva e gestita in modo efficiente con Zustand per la gestione dello stato globale.
 - Gestione degli errori: CrossChat gestisce gli errori sia sul lato server che sul lato client, garantendo un'esperienza utente senza intoppi e facile da risolvere in caso di problemi.
 
+# Installazione
 ## Setup del file .env per ogni servizio del backend e del frontend con porte diverse
 
 ```js
@@ -88,4 +89,20 @@ docker run -p [port]:[port] -d user-service
 cd frontend
 npm install
 npm run dev
+```
+
+# Avvio di Cypress per i test e2e
+Una volta che tutti i servizi sono attivi, ed il frontend è attivo sulla porta 3000:
+## Assicurati per ogni servizio di aver installato cypress
+```shell
+npm install cypress --save-dev
+```
+## Avvia i test
+Per eseguire il test per il singolo servizio:
+```shell
+npx cypress run
+```
+In alternativa se si vuole eseguire il test per il singolo servizio tramite l'interfaccia grafica di Cypress, allora il comando è il seguente:
+```shell
+npx cypress open
 ```
