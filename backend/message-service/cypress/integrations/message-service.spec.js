@@ -29,7 +29,7 @@ describe('Message Service API', () => {
       body: {
         message: 'Test message from Cypress'
       },
-      failOnStatusCode: false  // Disabilita il fail sul codice di stato non 2xx/3xx
+      failOnStatusCode: false  
     }).then((response) => {
       if (response.status !== 201) {
         // Gestione personalizzata dell'errore se non è stato restituito un 201
@@ -53,7 +53,7 @@ describe('Message Service API', () => {
         'Authorization': `Bearer ${authToken}`,
         'Content-Type': 'application/json'
       },
-      failOnStatusCode: false  // Disabilita il fail sul codice di stato non 2xx/3xx
+      failOnStatusCode: false  
     }).then((response) => {
       if (response.status === 401) {
         // Gestione caso di non autorizzazione

@@ -98,7 +98,7 @@ Una volta che tutti i servizi sono attivi, ed il frontend è attivo sulla porta 
 npm install cypress --save-dev
 ```
 ## Avvia i test
-Per eseguire il test per il singolo servizio:
+Per eseguire il test nel terminale per il singolo servizio:
 ```shell
 npx cypress run
 ```

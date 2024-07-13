@@ -9,7 +9,7 @@ describe('Authentication Service API', () => {
         confirmPassword: 'password123',
         gender: 'male'
       }).then((response) => {
-        expect(response.status).to.eq(201);
+        expect(response.status).to.eq(201); //201 - Created: significa che la richiesta ha avuto successo e il server ha creato una nuova risorsa
         expect(response.body).to.have.property('_id');
         expect(response.body).to.have.property('username', 'testuser');
         expect(response.body).to.have.property('fullName', 'Test User');
@@ -21,9 +21,9 @@ describe('Authentication Service API', () => {
         username: 'testuser',
         password: 'password123'
       }).then((response) => {
-        expect(response.status).to.eq(200);
-        expect(response.body).to.have.property('_id');
-        expect(response.body).to.have.property('username', 'testuser');
+        expect(response.status).to.eq(200); //Codice di stato 200: OK.
+        expect(response.body).to.have.property('_id'); //verifica che il corpo della risposta (response.body) contenga una proprietà chiamata _id.
+        expect(response.body).to.have.property('username', 'testuser'); //verifica che il corpo della risposta (response.body) contenga una proprietà chiamata username.
       });
     });
   
