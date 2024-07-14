@@ -45,7 +45,7 @@ describe('Message Service API', () => {
     });
   });
 
-  it('Dovrebbe ottenere i messaggi con successo', () => {
+  it('Dovrebbe ricevere i messaggi con successo', () => {
     cy.request({
       method: 'GET',
       url: `${Cypress.env('apiBaseUrl')}/${receiverId}`,

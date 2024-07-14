@@ -61,17 +61,17 @@ function handleInputErrors({
   gender,
 }) {
   if (!fullName || !username || !password || !confirmPassword || !gender) {
-    toast.error("Please fill in all fields");
+    toast.error("Compila tutti i campi");
     return false;
   }
 
   if (password !== confirmPassword) {
-    toast.error("Passwords do not match");
+    toast.error("Le passwords non coincidono!");
     return false;
   }
 
   if (password.length < 6) {
-    toast.error("Password must be at least 6 characters");
+    toast.error("la password deve essere almeno di 6 caratteri");
     return false;
   }
 

@@ -27,7 +27,7 @@ describe('Authentication Service API', () => {
       });
     });
   
-    it('Voglio poter effettuare un log out con successo', () => {
+    it('Voglio poter effettuare un logout con successo', () => {
       cy.request('POST', `${Cypress.env('apiBaseUrl')}/logout`, {
         username: 'testuser',
         password: 'password123'
