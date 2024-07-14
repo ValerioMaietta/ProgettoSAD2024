@@ -40,7 +40,7 @@ export const sendMessage = async (req, res) => {
     //è andato tutto a buon fine quindi resituisce status 201 e aggiunge i dati al db
     res.status(201).json(newMessage);
   } catch (error) {
-    console.log("Error in sendMessage controller: ", error.message);
+    console.log("Errore in sendMessage controller: ", error.message);
     res.status(500).json({ error: "Internal server error" });
   }
 };
@@ -60,7 +60,7 @@ export const getMessages = async (req, res) => {
 
     res.status(200).json(messages);
   } catch (error) {
-    console.log("Error in getMessages controller: ", error.message);
+    console.log("Errore in getMessages controller: ", error.message);
     res.status(500).json({ error: "Internal server error" });
   }
 };

@@ -7,13 +7,13 @@ export const signup = async (req, res) => {
 		const { fullName, username, password, confirmPassword, gender } = req.body;
 
 		if (password !== confirmPassword) {
-			return res.status(400).json({ error: "Passwords don't match" });
+			return res.status(400).json({ error: "Le passwords non corrispondono!" });
 		}
 
 		const user = await User.findOne({ username });
 
 		if (user) {
-			return res.status(400).json({ error: "Username already exists" });
+			return res.status(400).json({ error: "Username già esistente" });
 		}
 
 		// HASH PASSWORD
@@ -82,7 +82,7 @@ export const login = async (req, res) => {
 export const logout = (req, res) => {
 	try {
 		res.cookie("jwt", "", { maxAge: 0 }); //eliminiamo il cookie chiamato "jwt"
-		res.status(200).json({ message: "Logged out successfully" });
+		res.status(200).json({ message: "Sessione conclusa con successo" });
 	} catch (error) {
 		console.log("Error in logout controller", error.message);
 		res.status(500).json({ error: "Internal Server Error" });

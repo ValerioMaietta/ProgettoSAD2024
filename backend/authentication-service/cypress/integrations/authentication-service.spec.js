@@ -34,7 +34,7 @@ describe('Authentication Service API', () => {
       }).then(() => {
         cy.request('POST', `${Cypress.env('apiBaseUrl')}/logout`).then((response) => {
           expect(response.status).to.eq(200);
-          expect(response.body).to.have.property('message', 'Logged out successfully');
+          expect(response.body).to.have.property('message', 'Sessione conclusa con successo');
         });
       });
     });
